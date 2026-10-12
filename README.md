@@ -1,6 +1,12 @@
 # KCL CISS Slicer review
 
-Review script for 241 vestibular schwannoma CISS cases from the [KCL TCIA set](https://www.cancerimagingarchive.net/collection/vestibular-schwannoma-mc-rc/). This repository is the Slicer script and the instructions. The MRI volumes and segmentations are distributed separately (OneDrive) and are not in git.
+Review script for 241 vestibular schwannoma CISS cases from the [KCL TCIA set](https://www.cancerimagingarchive.net/collection/vestibular-schwannoma-mc-rc/). This repository is the Slicer script and the instructions. The MRI volumes are shared separately and are not in git.
+
+## What to send back
+
+Enter your name in the review window. Save overwrites the segment files already in the case and adds your name to the filename, for example `segments/vein_Jane_Doe.nii.gz` and `labels_Jane_Doe.nii.gz`. It does not keep the old file.
+
+For each case you edited, upload that case's `segments` folder and the `labels_` file. Do not upload `ciss.nii.gz`. That file is the MRI.
 
 ## Get a batch
 
@@ -58,13 +64,13 @@ Click **Choose folder…** and select either:
 - one batch folder, such as `batch_02_052-102`, or
 - a parent folder that contains several batch folders, then select the batch from the list and click **Load**
 
-**Change batch** switches folders without restarting Slicer. Progress is saved in `review_state.json` inside the batch folder you selected, so two people working from different folders do not share a position.
+**Change batch** switches folders without restarting Slicer.
 
 The script loads one case at a time: CISS as the underlay, and the six masks in `segments/` as one segmentation. The left labyrinth is light green and the right labyrinth is pink.
 
 Edit **Vein**, **Labyrinth_L**, and **Labyrinth_R** in Segment Editor. Brainstem, cerebellum, and tumor stay visible as context. Overlap is allowed, so painting one structure does not erase another.
 
-**Save** and **Save and next** write `segments/*.nii.gz` and rebuild `labels.nii.gz`.
+**Save** and **Save and next** overwrite the masks inside the case you opened. Each filename gains your name (`vein_Jane_Doe.nii.gz`). Progress and your name are stored in `review_state.json` inside the batch folder.
 
 ## What the labels mean
 

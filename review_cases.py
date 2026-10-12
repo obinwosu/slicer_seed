@@ -197,6 +197,15 @@ class CaseReviewer:
         self.title.setStyleSheet("font-size: 16px; font-weight: bold;")
         layout.addWidget(self.title)
 
+        name_row = qt.QHBoxLayout()
+        name_row.addWidget(qt.QLabel("Your name"))
+        self.nameEdit = qt.QLineEdit()
+        self.nameEdit.setPlaceholderText("Required before saving")
+        self.nameEdit.setText(self.state.get("annotator", ""))
+        self.nameEdit.editingFinished.connect(self._store_annotator)
+        name_row.addWidget(self.nameEdit)
+        layout.addLayout(name_row)
+
         self.detail = qt.QLabel()
         self.detail.setWordWrap(True)
         layout.addWidget(self.detail)
@@ -204,7 +213,7 @@ class CaseReviewer:
         hint = qt.QLabel(
             "Edit Vein, Labyrinth_L, and Labyrinth_R in Segment Editor. "
             "Brainstem, cerebellum, and tumor stay on as context. "
-            "Save writes segments/*.nii.gz and rebuilds labels.nii.gz."
+            "Save overwrites each mask and adds your name to the filename."
         )
         hint.setWordWrap(True)
         layout.addWidget(hint)
@@ -242,7 +251,8 @@ class CaseReviewer:
 
     def _step(self, delta, save):
         if save:
-            self.save_current()
+            if not self.save_current():
+                return
         elif self.dirty and not self._confirm_discard():
             return
         nxt = self.index + delta
@@ -263,6 +273,61 @@ class CaseReviewer:
         self.widget.close()
         global reviewer
         reviewer = CaseReviewer(chosen)
+
+    def _annotator_slug(self):
+        name = self.nameEdit.text.strip() if getattr(self, "nameEdit", None) else self.state.get("annotator", "")
+        parts = []
+        for character in name:
+            if character.isalnum() or character in ("_", "-"):
+                parts.append(character)
+            elif character.isspace() and parts and parts[-1] != "_":
+                parts.append("_")
+        return "".join(parts).strip("_")
+
+    def _store_annotator(self):
+        name = self.nameEdit.text.strip()
+        if name == self.state.get("annotator", ""):
+            return
+        self.state["annotator"] = name
+        self.save_state()
+
+    def _mask_names(self, directory, key):
+        if not os.path.isdir(directory):
+            return []
+        plain = f"{key}.nii.gz"
+        prefix = key + "_"
+        names = []
+        for name in os.listdir(directory):
+            if name == plain or (name.startswith(prefix) and name.endswith(".nii.gz")):
+                names.append(name)
+        return names
+
+    def _mask_path(self, directory, key):
+        names = self._mask_names(directory, key)
+        if not names:
+            return None
+        user = self._annotator_slug()
+        preferred = f"{key}_{user}.nii.gz" if user else ""
+        if preferred and preferred in names:
+            return os.path.join(directory, preferred)
+        named = [name for name in names if name != f"{key}.nii.gz"]
+        if len(named) == 1:
+            return os.path.join(directory, named[0])
+        plain = f"{key}.nii.gz"
+        if plain in names:
+            return os.path.join(directory, plain)
+        return os.path.join(directory, sorted(named)[-1])
+
+    def _write_named_mask(self, labelmap, directory, key, user):
+        os.makedirs(directory, exist_ok=True)
+        dest_name = f"{key}_{user}.nii.gz"
+        dest = os.path.join(directory, dest_name)
+        if not slicer.util.saveNode(labelmap, dest):
+            raise RuntimeError(f"Failed to write {dest}")
+        for name in self._mask_names(directory, key):
+            if name != dest_name:
+                os.remove(os.path.join(directory, name))
+        return dest
 
     def save_state(self):
         with open(self.state_path, "w") as handle:
@@ -302,8 +367,8 @@ class CaseReviewer:
         logic = slicer.modules.segmentations.logic()
         segmentation = self.segmentation.GetSegmentation()
         for key, display_name, color, opacity in SEGMENTS:
-            path = os.path.join(case_dir, "segments", f"{key}.nii.gz")
-            if not os.path.isfile(path):
+            path = self._mask_path(os.path.join(case_dir, "segments"), key)
+            if not path:
                 continue
             segment_id = segmentation.AddEmptySegment("", display_name)
             segment = segmentation.GetSegment(segment_id)
@@ -388,28 +453,37 @@ class CaseReviewer:
         self._select_segment(display_name)
 
     def save_current(self):
+        user = self._annotator_slug()
+        if not user:
+            qt.QMessageBox.warning(
+                self.widget,
+                "Name required",
+                "Enter your name before saving. It is added to each segment filename.",
+            )
+            return False
+        self._store_annotator()
         case_id = self.ids[self.index]
         case_dir = os.path.join(self.batch_dir, case_id)
+        seg_dir = os.path.join(case_dir, "segments")
         logic = slicer.modules.segmentations.logic()
         segmentation = self.segmentation.GetSegmentation()
 
-        for key, display_name, _, _ in SEGMENTS:
+        for _key, display_name, _, _ in SEGMENTS:
             segment_id = segmentation.GetSegmentIdBySegmentName(display_name)
             if not segment_id:
                 continue
             ids = vtk.vtkStringArray()
             ids.InsertNextValue(segment_id)
             labelmap = slicer.mrmlScene.AddNewNodeByClass("vtkMRMLLabelMapVolumeNode")
-            logic.ExportSegmentsToLabelmapNode(
-                self.segmentation, ids, labelmap, self.volume, EXTENT_REFERENCE_GEOMETRY
-            )
-            out_path = os.path.join(case_dir, "segments", f"{key}.nii.gz")
-            if not slicer.util.saveNode(labelmap, out_path):
+            try:
+                logic.ExportSegmentsToLabelmapNode(
+                    self.segmentation, ids, labelmap, self.volume, EXTENT_REFERENCE_GEOMETRY
+                )
+                self._write_named_mask(labelmap, seg_dir, _key, user)
+            finally:
                 slicer.mrmlScene.RemoveNode(labelmap)
-                raise RuntimeError(f"Failed to write {out_path}")
-            slicer.mrmlScene.RemoveNode(labelmap)
 
-        self._write_preview(case_dir)
+        self._write_preview(case_dir, user)
         reviewed = self.state.setdefault("reviewed", [])
         if case_id not in reviewed:
             reviewed.append(case_id)
@@ -418,8 +492,9 @@ class CaseReviewer:
         self.dirty = False
         self.detail.setText(self.detail.text.replace("   · saved", "") + "   · saved")
         slicer.util.delayDisplay(f"Saved case {case_id}", 800)
+        return True
 
-    def _write_preview(self, case_dir):
+    def _write_preview(self, case_dir, user):
         """Exclusive labelmap. Later segments in PREVIEW_ORDER overwrite earlier ones."""
         logic = slicer.modules.segmentations.logic()
         ids = vtk.vtkStringArray()
@@ -435,8 +510,10 @@ class CaseReviewer:
         logic.ExportSegmentsToLabelmapNode(
             self.segmentation, ids, labelmap, self.volume, EXTENT_REFERENCE_GEOMETRY
         )
-        slicer.util.saveNode(labelmap, os.path.join(case_dir, "labels.nii.gz"))
-        slicer.mrmlScene.RemoveNode(labelmap)
+        try:
+            self._write_named_mask(labelmap, case_dir, "labels", user)
+        finally:
+            slicer.mrmlScene.RemoveNode(labelmap)
 
 
 def main():
