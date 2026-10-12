@@ -21,7 +21,8 @@ import qt
 import slicer
 import vtk
 
-# Directory that contains this script and the batch_* folders.
+# Folder that contains this script. Case batches are not part of the git
+# repo; they can live anywhere on disk (a OneDrive download, for example).
 # Slicer --python-script and runpy.run_path both set __file__.
 try:
     SEED = os.path.dirname(os.path.abspath(__file__))
@@ -67,52 +68,81 @@ def discover_batches(root):
     return batches
 
 
-def choose_batch_directory(parent=None):
-    """Pick a folder of cases. Lists the batches under the seed, or any other folder."""
-    batches = discover_batches(SEED)
-    dialog = qt.QDialog(parent)
-    dialog.setWindowTitle("Choose cases")
-    dialog.setMinimumWidth(520)
-    layout = qt.QVBoxLayout(dialog)
-    layout.addWidget(qt.QLabel("Choose the batch folder to annotate."))
-    listing = qt.QListWidget()
-    paths = []
+def fill_batch_list(listing, paths, batches):
+    listing.clear()
+    del paths[:]
     for name, path, ids in batches:
         listing.addItem(f"{name}     {len(ids)} cases     {ids[0]}–{ids[-1]}")
         paths.append(path)
     if paths:
         listing.setCurrentRow(0)
+
+
+def choose_batch_directory(parent=None):
+    """Pick a local folder of cases, wherever the batches were saved."""
+    dialog = qt.QDialog(parent)
+    dialog.setWindowTitle("Choose cases")
+    dialog.setMinimumWidth(560)
+    layout = qt.QVBoxLayout(dialog)
+    layout.addWidget(qt.QLabel(
+        "Choose a local batch folder. Each batch is a directory of numbered cases "
+        "(each case contains ciss.nii.gz). You can also choose a parent folder "
+        "that holds several batches, then pick one from the list."
+    ))
+    listing = qt.QListWidget()
+    paths = []
+    fill_batch_list(listing, paths, discover_batches(SEED))
     layout.addWidget(listing)
 
     chosen = {"path": None}
+    start_dir = SEED if paths or case_ids(SEED) else os.path.expanduser("~")
 
     def accept_selected():
         row = listing.currentRow
         if row < 0 or row >= len(paths):
+            qt.QMessageBox.information(
+                dialog,
+                "Choose a folder",
+                "Use Choose folder… and select the batch directory on this computer.",
+            )
             return
         chosen["path"] = paths[row]
         dialog.accept()
 
     def browse_folder():
-        path = qt.QFileDialog.getExistingDirectory(dialog, "Choose a folder of cases", SEED)
+        path = qt.QFileDialog.getExistingDirectory(dialog, "Choose a folder of cases", start_dir)
         if not path:
             return
-        ids = case_ids(path)
-        if not ids:
+        if os.path.isfile(os.path.join(path, "ciss.nii.gz")):
+            qt.QMessageBox.warning(
+                dialog,
+                "One case selected",
+                "That folder is a single case. Choose the batch folder that contains it.",
+            )
+            return
+        if case_ids(path):
+            chosen["path"] = path
+            dialog.accept()
+            return
+        found = discover_batches(path)
+        if not found:
             qt.QMessageBox.warning(
                 dialog,
                 "No cases",
-                "That folder has no case directories containing ciss.nii.gz.",
+                "No numbered case folders with ciss.nii.gz were found there.",
             )
             return
-        chosen["path"] = path
-        dialog.accept()
+        if len(found) == 1:
+            chosen["path"] = found[0][1]
+            dialog.accept()
+            return
+        fill_batch_list(listing, paths, found)
 
     buttons = qt.QHBoxLayout()
     browse = qt.QPushButton("Choose folder…")
     load = qt.QPushButton("Load")
     cancel = qt.QPushButton("Cancel")
-    load.setDefault(True)
+    browse.setDefault(True)
     for button in (browse, load, cancel):
         buttons.addWidget(button)
     layout.addLayout(buttons)

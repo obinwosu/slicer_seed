@@ -2,3 +2,6 @@
 review_state.json
 __pycache__/
 *.pyc
+batch_*/
+*.nii.gz
+*.nii
