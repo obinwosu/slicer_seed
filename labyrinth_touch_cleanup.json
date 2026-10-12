@@ -1,0 +1,3597 @@
+{
+  "rule": "Removed 26-connected labyrinth components with any face-adjacent voxel to brainstem or cerebellum.",
+  "unique_cases": 237,
+  "labyrinth_segments": 443,
+  "islands_removed": 899,
+  "voxels_removed": 295206,
+  "sides_emptied": [
+    "004 R",
+    "005 L",
+    "007 L",
+    "027 R",
+    "064 L",
+    "156 R",
+    "157 R",
+    "164 L",
+    "191 L",
+    "220 R"
+  ],
+  "cases_affected": [
+    "001",
+    "002",
+    "003",
+    "004",
+    "005",
+    "006",
+    "007",
+    "008",
+    "009",
+    "010",
+    "011",
+    "012",
+    "013",
+    "014",
+    "015",
+    "016",
+    "017",
+    "018",
+    "019",
+    "020",
+    "021",
+    "022",
+    "023",
+    "024",
+    "025",
+    "026",
+    "027",
+    "028",
+    "029",
+    "030",
+    "031",
+    "032",
+    "033",
+    "034",
+    "035",
+    "036",
+    "037",
+    "038",
+    "040",
+    "041",
+    "042",
+    "043",
+    "044",
+    "045",
+    "046",
+    "047",
+    "048",
+    "049",
+    "050",
+    "051",
+    "052",
+    "053",
+    "054",
+    "055",
+    "056",
+    "057",
+    "058",
+    "059",
+    "060",
+    "061",
+    "062",
+    "063",
+    "064",
+    "065",
+    "066",
+    "067",
+    "068",
+    "069",
+    "070",
+    "071",
+    "072",
+    "073",
+    "074",
+    "075",
+    "076",
+    "077",
+    "078",
+    "079",
+    "080",
+    "081",
+    "082",
+    "083",
+    "084",
+    "085",
+    "086",
+    "087",
+    "088",
+    "089",
+    "090",
+    "091",
+    "092",
+    "093",
+    "094",
+    "095",
+    "096",
+    "098",
+    "099",
+    "100",
+    "102",
+    "103",
+    "104",
+    "105",
+    "106",
+    "107",
+    "108",
+    "109",
+    "110",
+    "111",
+    "112",
+    "113",
+    "114",
+    "115",
+    "116",
+    "117",
+    "118",
+    "119",
+    "120",
+    "121",
+    "122",
+    "123",
+    "124",
+    "125",
+    "126",
+    "127",
+    "128",
+    "129",
+    "132",
+    "134",
+    "135",
+    "136",
+    "137",
+    "138",
+    "139",
+    "140",
+    "141",
+    "142",
+    "143",
+    "144",
+    "145",
+    "146",
+    "147",
+    "148",
+    "149",
+    "150",
+    "151",
+    "152",
+    "153",
+    "154",
+    "155",
+    "156",
+    "157",
+    "158",
+    "159",
+    "161",
+    "162",
+    "164",
+    "165",
+    "166",
+    "167",
+    "169",
+    "170",
+    "171",
+    "172",
+    "173",
+    "174",
+    "175",
+    "176",
+    "177",
+    "178",
+    "179",
+    "180",
+    "181",
+    "182",
+    "183",
+    "184",
+    "185",
+    "186",
+    "187",
+    "188",
+    "189",
+    "190",
+    "191",
+    "192",
+    "193",
+    "194",
+    "195",
+    "196",
+    "197",
+    "198",
+    "199",
+    "200",
+    "201",
+    "202",
+    "203",
+    "204",
+    "205",
+    "206",
+    "207",
+    "209",
+    "210",
+    "211",
+    "212",
+    "213",
+    "214",
+    "215",
+    "216",
+    "217",
+    "218",
+    "220",
+    "221",
+    "222",
+    "223",
+    "224",
+    "225",
+    "226",
+    "228",
+    "229",
+    "230",
+    "232",
+    "233",
+    "234",
+    "235",
+    "236",
+    "237",
+    "238",
+    "239",
+    "240",
+    "241",
+    "242",
+    "243",
+    "244",
+    "245",
+    "246",
+    "247",
+    "248",
+    "249",
+    "250"
+  ],
+  "segments_affected": [
+    "001 L",
+    "002 L",
+    "003 L",
+    "003 R",
+    "004 L",
+    "004 R",
+    "005 L",
+    "005 R",
+    "006 R",
+    "007 L",
+    "007 R",
+    "008 L",
+    "008 R",
+    "009 L",
+    "009 R",
+    "010 L",
+    "010 R",
+    "011 L",
+    "011 R",
+    "012 R",
+    "013 L",
+    "013 R",
+    "014 L",
+    "014 R",
+    "015 L",
+    "015 R",
+    "016 L",
+    "016 R",
+    "017 R",
+    "018 R",
+    "019 L",
+    "019 R",
+    "020 L",
+    "020 R",
+    "021 L",
+    "021 R",
+    "022 L",
+    "022 R",
+    "023 L",
+    "023 R",
+    "024 L",
+    "025 L",
+    "025 R",
+    "026 L",
+    "026 R",
+    "027 L",
+    "027 R",
+    "028 L",
+    "028 R",
+    "029 L",
+    "029 R",
+    "030 L",
+    "030 R",
+    "031 L",
+    "031 R",
+    "032 L",
+    "032 R",
+    "033 L",
+    "033 R",
+    "034 L",
+    "034 R",
+    "035 L",
+    "035 R",
+    "036 L",
+    "036 R",
+    "037 L",
+    "037 R",
+    "038 L",
+    "038 R",
+    "040 L",
+    "040 R",
+    "041 L",
+    "041 R",
+    "042 L",
+    "042 R",
+    "043 L",
+    "043 R",
+    "044 L",
+    "044 R",
+    "045 L",
+    "045 R",
+    "046 L",
+    "046 R",
+    "047 L",
+    "047 R",
+    "048 L",
+    "048 R",
+    "049 L",
+    "049 R",
+    "050 L",
+    "050 R",
+    "051 L",
+    "051 R",
+    "052 L",
+    "052 R",
+    "053 L",
+    "053 R",
+    "054 L",
+    "054 R",
+    "055 L",
+    "055 R",
+    "056 L",
+    "056 R",
+    "057 L",
+    "057 R",
+    "058 L",
+    "058 R",
+    "059 L",
+    "059 R",
+    "060 L",
+    "060 R",
+    "061 L",
+    "061 R",
+    "062 L",
+    "062 R",
+    "063 L",
+    "063 R",
+    "064 L",
+    "064 R",
+    "065 R",
+    "066 L",
+    "066 R",
+    "067 R",
+    "068 L",
+    "068 R",
+    "069 L",
+    "070 L",
+    "070 R",
+    "071 L",
+    "071 R",
+    "072 L",
+    "072 R",
+    "073 L",
+    "073 R",
+    "074 L",
+    "074 R",
+    "075 L",
+    "076 L",
+    "076 R",
+    "077 L",
+    "077 R",
+    "078 L",
+    "078 R",
+    "079 L",
+    "079 R",
+    "080 R",
+    "081 L",
+    "081 R",
+    "082 L",
+    "082 R",
+    "083 L",
+    "083 R",
+    "084 L",
+    "084 R",
+    "085 L",
+    "085 R",
+    "086 L",
+    "086 R",
+    "087 L",
+    "087 R",
+    "088 L",
+    "088 R",
+    "089 L",
+    "090 L",
+    "090 R",
+    "091 L",
+    "091 R",
+    "092 L",
+    "092 R",
+    "093 L",
+    "093 R",
+    "094 L",
+    "094 R",
+    "095 L",
+    "095 R",
+    "096 L",
+    "098 R",
+    "099 L",
+    "099 R",
+    "100 L",
+    "100 R",
+    "102 L",
+    "102 R",
+    "103 L",
+    "103 R",
+    "104 L",
+    "104 R",
+    "105 L",
+    "105 R",
+    "106 L",
+    "106 R",
+    "107 L",
+    "107 R",
+    "108 L",
+    "109 L",
+    "109 R",
+    "110 L",
+    "110 R",
+    "111 L",
+    "111 R",
+    "112 L",
+    "112 R",
+    "113 L",
+    "113 R",
+    "114 L",
+    "114 R",
+    "115 L",
+    "115 R",
+    "116 L",
+    "116 R",
+    "117 L",
+    "117 R",
+    "118 L",
+    "118 R",
+    "119 L",
+    "119 R",
+    "120 L",
+    "120 R",
+    "121 L",
+    "122 L",
+    "122 R",
+    "123 L",
+    "123 R",
+    "124 L",
+    "124 R",
+    "125 L",
+    "125 R",
+    "126 L",
+    "126 R",
+    "127 L",
+    "127 R",
+    "128 L",
+    "128 R",
+    "129 L",
+    "129 R",
+    "132 L",
+    "132 R",
+    "134 L",
+    "134 R",
+    "135 L",
+    "135 R",
+    "136 L",
+    "136 R",
+    "137 L",
+    "137 R",
+    "138 L",
+    "138 R",
+    "139 L",
+    "139 R",
+    "140 L",
+    "140 R",
+    "141 L",
+    "141 R",
+    "142 L",
+    "142 R",
+    "143 R",
+    "144 L",
+    "144 R",
+    "145 L",
+    "145 R",
+    "146 L",
+    "146 R",
+    "147 L",
+    "147 R",
+    "148 L",
+    "149 L",
+    "149 R",
+    "150 L",
+    "150 R",
+    "151 L",
+    "151 R",
+    "152 L",
+    "152 R",
+    "153 L",
+    "153 R",
+    "154 L",
+    "154 R",
+    "155 L",
+    "155 R",
+    "156 L",
+    "156 R",
+    "157 L",
+    "157 R",
+    "158 L",
+    "159 L",
+    "159 R",
+    "161 L",
+    "162 L",
+    "162 R",
+    "164 L",
+    "164 R",
+    "165 L",
+    "165 R",
+    "166 L",
+    "166 R",
+    "167 L",
+    "167 R",
+    "169 L",
+    "170 L",
+    "170 R",
+    "171 L",
+    "171 R",
+    "172 L",
+    "172 R",
+    "173 L",
+    "173 R",
+    "174 L",
+    "174 R",
+    "175 L",
+    "175 R",
+    "176 L",
+    "176 R",
+    "177 L",
+    "177 R",
+    "178 L",
+    "178 R",
+    "179 L",
+    "179 R",
+    "180 L",
+    "180 R",
+    "181 L",
+    "181 R",
+    "182 L",
+    "182 R",
+    "183 L",
+    "184 L",
+    "184 R",
+    "185 R",
+    "186 L",
+    "186 R",
+    "187 L",
+    "187 R",
+    "188 L",
+    "188 R",
+    "189 L",
+    "189 R",
+    "190 L",
+    "190 R",
+    "191 L",
+    "191 R",
+    "192 L",
+    "192 R",
+    "193 L",
+    "193 R",
+    "194 L",
+    "194 R",
+    "195 L",
+    "195 R",
+    "196 L",
+    "196 R",
+    "197 L",
+    "197 R",
+    "198 L",
+    "198 R",
+    "199 L",
+    "199 R",
+    "200 L",
+    "200 R",
+    "201 L",
+    "201 R",
+    "202 L",
+    "202 R",
+    "203 L",
+    "203 R",
+    "204 L",
+    "204 R",
+    "205 L",
+    "205 R",
+    "206 L",
+    "206 R",
+    "207 L",
+    "207 R",
+    "209 L",
+    "209 R",
+    "210 R",
+    "211 L",
+    "211 R",
+    "212 L",
+    "212 R",
+    "213 L",
+    "213 R",
+    "214 L",
+    "215 L",
+    "215 R",
+    "216 L",
+    "216 R",
+    "217 L",
+    "217 R",
+    "218 L",
+    "218 R",
+    "220 L",
+    "220 R",
+    "221 L",
+    "221 R",
+    "222 L",
+    "222 R",
+    "223 L",
+    "223 R",
+    "224 L",
+    "224 R",
+    "225 L",
+    "225 R",
+    "226 L",
+    "226 R",
+    "228 L",
+    "228 R",
+    "229 L",
+    "229 R",
+    "230 L",
+    "232 L",
+    "232 R",
+    "233 L",
+    "233 R",
+    "234 L",
+    "234 R",
+    "235 L",
+    "235 R",
+    "236 L",
+    "236 R",
+    "237 L",
+    "237 R",
+    "238 R",
+    "239 R",
+    "240 L",
+    "240 R",
+    "241 L",
+    "241 R",
+    "242 L",
+    "242 R",
+    "243 L",
+    "243 R",
+    "244 L",
+    "245 R",
+    "246 L",
+    "246 R",
+    "247 L",
+    "247 R",
+    "248 L",
+    "248 R",
+    "249 L",
+    "249 R",
+    "250 L",
+    "250 R"
+  ],
+  "per_case": {
+    "001": {
+      "L": {
+        "islands_removed": 4,
+        "voxels_removed": 22,
+        "voxels_kept": 134
+      },
+      "R": {
+        "islands_removed": 0,
+        "voxels_removed": 0,
+        "voxels_kept": 263
+      }
+    },
+    "002": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 30,
+        "voxels_kept": 311
+      },
+      "R": {
+        "islands_removed": 0,
+        "voxels_removed": 0,
+        "voxels_kept": 110
+      }
+    },
+    "003": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 590,
+        "voxels_kept": 318
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 358,
+        "voxels_kept": 434
+      }
+    },
+    "004": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 384,
+        "voxels_kept": 482
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 1105,
+        "voxels_kept": 0
+      }
+    },
+    "005": {
+      "L": {
+        "islands_removed": 3,
+        "voxels_removed": 763,
+        "voxels_kept": 0
+      },
+      "R": {
+        "islands_removed": 3,
+        "voxels_removed": 475,
+        "voxels_kept": 605
+      }
+    },
+    "006": {
+      "L": {
+        "islands_removed": 0,
+        "voxels_removed": 0,
+        "voxels_kept": 524
+      },
+      "R": {
+        "islands_removed": 2,
+        "voxels_removed": 1010,
+        "voxels_kept": 192
+      }
+    },
+    "007": {
+      "L": {
+        "islands_removed": 2,
+        "voxels_removed": 1126,
+        "voxels_kept": 0
+      },
+      "R": {
+        "islands_removed": 2,
+        "voxels_removed": 1065,
+        "voxels_kept": 212
+      }
+    },
+    "008": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 629,
+        "voxels_kept": 452
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 882,
+        "voxels_kept": 239
+      }
+    },
+    "009": {
+      "L": {
+        "islands_removed": 2,
+        "voxels_removed": 1595,
+        "voxels_kept": 173
+      },
+      "R": {
+        "islands_removed": 2,
+        "voxels_removed": 1780,
+        "voxels_kept": 266
+      }
+    },
+    "010": {
+      "L": {
+        "islands_removed": 3,
+        "voxels_removed": 1112,
+        "voxels_kept": 248
+      },
+      "R": {
+        "islands_removed": 3,
+        "voxels_removed": 1081,
+        "voxels_kept": 204
+      }
+    },
+    "011": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 227,
+        "voxels_kept": 397
+      },
+      "R": {
+        "islands_removed": 2,
+        "voxels_removed": 1042,
+        "voxels_kept": 11
+      }
+    },
+    "012": {
+      "L": {
+        "islands_removed": 0,
+        "voxels_removed": 0,
+        "voxels_kept": 429
+      },
+      "R": {
+        "islands_removed": 2,
+        "voxels_removed": 113,
+        "voxels_kept": 266
+      }
+    },
+    "013": {
+      "L": {
+        "islands_removed": 2,
+        "voxels_removed": 1323,
+        "voxels_kept": 6
+      },
+      "R": {
+        "islands_removed": 2,
+        "voxels_removed": 1374,
+        "voxels_kept": 6
+      }
+    },
+    "014": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 1510,
+        "voxels_kept": 12
+      },
+      "R": {
+        "islands_removed": 2,
+        "voxels_removed": 318,
+        "voxels_kept": 400
+      }
+    },
+    "015": {
+      "L": {
+        "islands_removed": 3,
+        "voxels_removed": 623,
+        "voxels_kept": 351
+      },
+      "R": {
+        "islands_removed": 3,
+        "voxels_removed": 1352,
+        "voxels_kept": 198
+      }
+    },
+    "016": {
+      "L": {
+        "islands_removed": 2,
+        "voxels_removed": 994,
+        "voxels_kept": 193
+      },
+      "R": {
+        "islands_removed": 3,
+        "voxels_removed": 586,
+        "voxels_kept": 542
+      }
+    },
+    "017": {
+      "L": {
+        "islands_removed": 0,
+        "voxels_removed": 0,
+        "voxels_kept": 683
+      },
+      "R": {
+        "islands_removed": 8,
+        "voxels_removed": 1419,
+        "voxels_kept": 474
+      }
+    },
+    "018": {
+      "L": {
+        "islands_removed": 0,
+        "voxels_removed": 0,
+        "voxels_kept": 926
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 618,
+        "voxels_kept": 813
+      }
+    },
+    "019": {
+      "L": {
+        "islands_removed": 3,
+        "voxels_removed": 600,
+        "voxels_kept": 122
+      },
+      "R": {
+        "islands_removed": 2,
+        "voxels_removed": 301,
+        "voxels_kept": 339
+      }
+    },
+    "020": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 421,
+        "voxels_kept": 448
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 956,
+        "voxels_kept": 575
+      }
+    },
+    "021": {
+      "L": {
+        "islands_removed": 6,
+        "voxels_removed": 994,
+        "voxels_kept": 89
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 910,
+        "voxels_kept": 254
+      }
+    },
+    "022": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 577,
+        "voxels_kept": 813
+      },
+      "R": {
+        "islands_removed": 2,
+        "voxels_removed": 766,
+        "voxels_kept": 450
+      }
+    },
+    "023": {
+      "L": {
+        "islands_removed": 3,
+        "voxels_removed": 914,
+        "voxels_kept": 491
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 674,
+        "voxels_kept": 727
+      }
+    },
+    "024": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 128,
+        "voxels_kept": 426
+      },
+      "R": {
+        "islands_removed": 0,
+        "voxels_removed": 0,
+        "voxels_kept": 509
+      }
+    },
+    "025": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 392,
+        "voxels_kept": 643
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 847,
+        "voxels_kept": 286
+      }
+    },
+    "026": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 307,
+        "voxels_kept": 428
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 759,
+        "voxels_kept": 370
+      }
+    },
+    "027": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 169,
+        "voxels_kept": 500
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 560,
+        "voxels_kept": 0
+      }
+    },
+    "028": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 784,
+        "voxels_kept": 318
+      },
+      "R": {
+        "islands_removed": 3,
+        "voxels_removed": 149,
+        "voxels_kept": 353
+      }
+    },
+    "029": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 765,
+        "voxels_kept": 28
+      },
+      "R": {
+        "islands_removed": 3,
+        "voxels_removed": 933,
+        "voxels_kept": 510
+      }
+    },
+    "030": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 1097,
+        "voxels_kept": 143
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 778,
+        "voxels_kept": 533
+      }
+    },
+    "031": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 432,
+        "voxels_kept": 420
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 617,
+        "voxels_kept": 352
+      }
+    },
+    "032": {
+      "L": {
+        "islands_removed": 3,
+        "voxels_removed": 371,
+        "voxels_kept": 366
+      },
+      "R": {
+        "islands_removed": 3,
+        "voxels_removed": 327,
+        "voxels_kept": 316
+      }
+    },
+    "033": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 1124,
+        "voxels_kept": 209
+      },
+      "R": {
+        "islands_removed": 4,
+        "voxels_removed": 1127,
+        "voxels_kept": 81
+      }
+    },
+    "034": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 529,
+        "voxels_kept": 281
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 497,
+        "voxels_kept": 543
+      }
+    },
+    "035": {
+      "L": {
+        "islands_removed": 3,
+        "voxels_removed": 478,
+        "voxels_kept": 404
+      },
+      "R": {
+        "islands_removed": 4,
+        "voxels_removed": 814,
+        "voxels_kept": 518
+      }
+    },
+    "036": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 702,
+        "voxels_kept": 353
+      },
+      "R": {
+        "islands_removed": 2,
+        "voxels_removed": 292,
+        "voxels_kept": 471
+      }
+    },
+    "037": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 437,
+        "voxels_kept": 429
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 197,
+        "voxels_kept": 706
+      }
+    },
+    "038": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 593,
+        "voxels_kept": 447
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 625,
+        "voxels_kept": 546
+      }
+    },
+    "040": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 638,
+        "voxels_kept": 333
+      },
+      "R": {
+        "islands_removed": 2,
+        "voxels_removed": 957,
+        "voxels_kept": 151
+      }
+    },
+    "041": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 189,
+        "voxels_kept": 437
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 841,
+        "voxels_kept": 173
+      }
+    },
+    "042": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 40,
+        "voxels_kept": 725
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 147,
+        "voxels_kept": 577
+      }
+    },
+    "043": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 298,
+        "voxels_kept": 487
+      },
+      "R": {
+        "islands_removed": 2,
+        "voxels_removed": 525,
+        "voxels_kept": 354
+      }
+    },
+    "044": {
+      "L": {
+        "islands_removed": 2,
+        "voxels_removed": 430,
+        "voxels_kept": 363
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 126,
+        "voxels_kept": 618
+      }
+    },
+    "045": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 430,
+        "voxels_kept": 74
+      },
+      "R": {
+        "islands_removed": 2,
+        "voxels_removed": 338,
+        "voxels_kept": 479
+      }
+    },
+    "046": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 1512,
+        "voxels_kept": 186
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 3,
+        "voxels_kept": 404
+      }
+    },
+    "047": {
+      "L": {
+        "islands_removed": 2,
+        "voxels_removed": 655,
+        "voxels_kept": 502
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 355,
+        "voxels_kept": 581
+      }
+    },
+    "048": {
+      "L": {
+        "islands_removed": 2,
+        "voxels_removed": 1205,
+        "voxels_kept": 17
+      },
+      "R": {
+        "islands_removed": 2,
+        "voxels_removed": 627,
+        "voxels_kept": 333
+      }
+    },
+    "049": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 7,
+        "voxels_kept": 1055
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 324,
+        "voxels_kept": 356
+      }
+    },
+    "050": {
+      "L": {
+        "islands_removed": 2,
+        "voxels_removed": 1040,
+        "voxels_kept": 268
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 1210,
+        "voxels_kept": 279
+      }
+    },
+    "051": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 255,
+        "voxels_kept": 589
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 396,
+        "voxels_kept": 468
+      }
+    },
+    "052": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 580,
+        "voxels_kept": 292
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 301,
+        "voxels_kept": 489
+      }
+    },
+    "053": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 1172,
+        "voxels_kept": 614
+      },
+      "R": {
+        "islands_removed": 2,
+        "voxels_removed": 1857,
+        "voxels_kept": 422
+      }
+    },
+    "054": {
+      "L": {
+        "islands_removed": 2,
+        "voxels_removed": 317,
+        "voxels_kept": 424
+      },
+      "R": {
+        "islands_removed": 2,
+        "voxels_removed": 409,
+        "voxels_kept": 351
+      }
+    },
+    "055": {
+      "L": {
+        "islands_removed": 3,
+        "voxels_removed": 681,
+        "voxels_kept": 482
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 815,
+        "voxels_kept": 266
+      }
+    },
+    "056": {
+      "L": {
+        "islands_removed": 2,
+        "voxels_removed": 805,
+        "voxels_kept": 389
+      },
+      "R": {
+        "islands_removed": 2,
+        "voxels_removed": 1103,
+        "voxels_kept": 457
+      }
+    },
+    "057": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 839,
+        "voxels_kept": 171
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 86,
+        "voxels_kept": 489
+      }
+    },
+    "058": {
+      "L": {
+        "islands_removed": 2,
+        "voxels_removed": 571,
+        "voxels_kept": 402
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 1044,
+        "voxels_kept": 452
+      }
+    },
+    "059": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 891,
+        "voxels_kept": 226
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 1212,
+        "voxels_kept": 148
+      }
+    },
+    "060": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 665,
+        "voxels_kept": 22
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 1041,
+        "voxels_kept": 363
+      }
+    },
+    "061": {
+      "L": {
+        "islands_removed": 4,
+        "voxels_removed": 1375,
+        "voxels_kept": 246
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 256,
+        "voxels_kept": 653
+      }
+    },
+    "062": {
+      "L": {
+        "islands_removed": 2,
+        "voxels_removed": 472,
+        "voxels_kept": 305
+      },
+      "R": {
+        "islands_removed": 4,
+        "voxels_removed": 1063,
+        "voxels_kept": 318
+      }
+    },
+    "063": {
+      "L": {
+        "islands_removed": 3,
+        "voxels_removed": 594,
+        "voxels_kept": 327
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 170,
+        "voxels_kept": 439
+      }
+    },
+    "064": {
+      "L": {
+        "islands_removed": 4,
+        "voxels_removed": 1540,
+        "voxels_kept": 0
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 1047,
+        "voxels_kept": 190
+      }
+    },
+    "065": {
+      "L": {
+        "islands_removed": 0,
+        "voxels_removed": 0,
+        "voxels_kept": 496
+      },
+      "R": {
+        "islands_removed": 2,
+        "voxels_removed": 836,
+        "voxels_kept": 421
+      }
+    },
+    "066": {
+      "L": {
+        "islands_removed": 2,
+        "voxels_removed": 678,
+        "voxels_kept": 318
+      },
+      "R": {
+        "islands_removed": 5,
+        "voxels_removed": 1194,
+        "voxels_kept": 220
+      }
+    },
+    "067": {
+      "L": {
+        "islands_removed": 0,
+        "voxels_removed": 0,
+        "voxels_kept": 579
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 790,
+        "voxels_kept": 391
+      }
+    },
+    "068": {
+      "L": {
+        "islands_removed": 3,
+        "voxels_removed": 1102,
+        "voxels_kept": 151
+      },
+      "R": {
+        "islands_removed": 2,
+        "voxels_removed": 621,
+        "voxels_kept": 547
+      }
+    },
+    "069": {
+      "L": {
+        "islands_removed": 3,
+        "voxels_removed": 753,
+        "voxels_kept": 163
+      },
+      "R": {
+        "islands_removed": 0,
+        "voxels_removed": 0,
+        "voxels_kept": 455
+      }
+    },
+    "070": {
+      "L": {
+        "islands_removed": 2,
+        "voxels_removed": 653,
+        "voxels_kept": 202
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 98,
+        "voxels_kept": 468
+      }
+    },
+    "071": {
+      "L": {
+        "islands_removed": 3,
+        "voxels_removed": 1074,
+        "voxels_kept": 240
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 487,
+        "voxels_kept": 459
+      }
+    },
+    "072": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 211,
+        "voxels_kept": 446
+      },
+      "R": {
+        "islands_removed": 3,
+        "voxels_removed": 490,
+        "voxels_kept": 448
+      }
+    },
+    "073": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 628,
+        "voxels_kept": 243
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 1100,
+        "voxels_kept": 159
+      }
+    },
+    "074": {
+      "L": {
+        "islands_removed": 2,
+        "voxels_removed": 5,
+        "voxels_kept": 483
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 290,
+        "voxels_kept": 332
+      }
+    },
+    "075": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 251,
+        "voxels_kept": 408
+      },
+      "R": {
+        "islands_removed": 0,
+        "voxels_removed": 0,
+        "voxels_kept": 603
+      }
+    },
+    "076": {
+      "L": {
+        "islands_removed": 4,
+        "voxels_removed": 369,
+        "voxels_kept": 381
+      },
+      "R": {
+        "islands_removed": 3,
+        "voxels_removed": 804,
+        "voxels_kept": 263
+      }
+    },
+    "077": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 908,
+        "voxels_kept": 243
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 422,
+        "voxels_kept": 470
+      }
+    },
+    "078": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 596,
+        "voxels_kept": 373
+      },
+      "R": {
+        "islands_removed": 2,
+        "voxels_removed": 1227,
+        "voxels_kept": 232
+      }
+    },
+    "079": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 461,
+        "voxels_kept": 851
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 747,
+        "voxels_kept": 843
+      }
+    },
+    "080": {
+      "L": {
+        "islands_removed": 0,
+        "voxels_removed": 0,
+        "voxels_kept": 465
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 154,
+        "voxels_kept": 690
+      }
+    },
+    "081": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 1067,
+        "voxels_kept": 249
+      },
+      "R": {
+        "islands_removed": 4,
+        "voxels_removed": 999,
+        "voxels_kept": 278
+      }
+    },
+    "082": {
+      "L": {
+        "islands_removed": 4,
+        "voxels_removed": 968,
+        "voxels_kept": 221
+      },
+      "R": {
+        "islands_removed": 2,
+        "voxels_removed": 641,
+        "voxels_kept": 360
+      }
+    },
+    "083": {
+      "L": {
+        "islands_removed": 3,
+        "voxels_removed": 733,
+        "voxels_kept": 156
+      },
+      "R": {
+        "islands_removed": 4,
+        "voxels_removed": 656,
+        "voxels_kept": 280
+      }
+    },
+    "084": {
+      "L": {
+        "islands_removed": 3,
+        "voxels_removed": 1538,
+        "voxels_kept": 98
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 1040,
+        "voxels_kept": 187
+      }
+    },
+    "085": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 942,
+        "voxels_kept": 441
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 599,
+        "voxels_kept": 491
+      }
+    },
+    "086": {
+      "L": {
+        "islands_removed": 2,
+        "voxels_removed": 861,
+        "voxels_kept": 596
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 205,
+        "voxels_kept": 675
+      }
+    },
+    "087": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 1972,
+        "voxels_kept": 138
+      },
+      "R": {
+        "islands_removed": 3,
+        "voxels_removed": 1221,
+        "voxels_kept": 249
+      }
+    },
+    "088": {
+      "L": {
+        "islands_removed": 4,
+        "voxels_removed": 1188,
+        "voxels_kept": 18
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 1542,
+        "voxels_kept": 183
+      }
+    },
+    "089": {
+      "L": {
+        "islands_removed": 6,
+        "voxels_removed": 581,
+        "voxels_kept": 156
+      },
+      "R": {
+        "islands_removed": 0,
+        "voxels_removed": 0,
+        "voxels_kept": 470
+      }
+    },
+    "090": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 34,
+        "voxels_kept": 756
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 183,
+        "voxels_kept": 663
+      }
+    },
+    "091": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 14,
+        "voxels_kept": 380
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 32,
+        "voxels_kept": 411
+      }
+    },
+    "092": {
+      "L": {
+        "islands_removed": 2,
+        "voxels_removed": 871,
+        "voxels_kept": 307
+      },
+      "R": {
+        "islands_removed": 3,
+        "voxels_removed": 275,
+        "voxels_kept": 780
+      }
+    },
+    "093": {
+      "L": {
+        "islands_removed": 3,
+        "voxels_removed": 1075,
+        "voxels_kept": 455
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 359,
+        "voxels_kept": 729
+      }
+    },
+    "094": {
+      "L": {
+        "islands_removed": 3,
+        "voxels_removed": 1550,
+        "voxels_kept": 154
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 1418,
+        "voxels_kept": 229
+      }
+    },
+    "095": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 762,
+        "voxels_kept": 351
+      },
+      "R": {
+        "islands_removed": 4,
+        "voxels_removed": 1098,
+        "voxels_kept": 210
+      }
+    },
+    "096": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 103,
+        "voxels_kept": 383
+      },
+      "R": {
+        "islands_removed": 0,
+        "voxels_removed": 0,
+        "voxels_kept": 407
+      }
+    },
+    "098": {
+      "L": {
+        "islands_removed": 0,
+        "voxels_removed": 0,
+        "voxels_kept": 478
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 135,
+        "voxels_kept": 932
+      }
+    },
+    "099": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 133,
+        "voxels_kept": 373
+      },
+      "R": {
+        "islands_removed": 3,
+        "voxels_removed": 337,
+        "voxels_kept": 526
+      }
+    },
+    "100": {
+      "L": {
+        "islands_removed": 2,
+        "voxels_removed": 765,
+        "voxels_kept": 226
+      },
+      "R": {
+        "islands_removed": 6,
+        "voxels_removed": 756,
+        "voxels_kept": 212
+      }
+    },
+    "101": {
+      "L": {
+        "islands_removed": 0,
+        "voxels_removed": 0,
+        "voxels_kept": 479
+      },
+      "R": {
+        "islands_removed": 0,
+        "voxels_removed": 0,
+        "voxels_kept": 421
+      }
+    },
+    "102": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 530,
+        "voxels_kept": 206
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 819,
+        "voxels_kept": 161
+      }
+    },
+    "103": {
+      "L": {
+        "islands_removed": 2,
+        "voxels_removed": 289,
+        "voxels_kept": 307
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 315,
+        "voxels_kept": 400
+      }
+    },
+    "104": {
+      "L": {
+        "islands_removed": 17,
+        "voxels_removed": 616,
+        "voxels_kept": 57
+      },
+      "R": {
+        "islands_removed": 3,
+        "voxels_removed": 891,
+        "voxels_kept": 100
+      }
+    },
+    "105": {
+      "L": {
+        "islands_removed": 2,
+        "voxels_removed": 329,
+        "voxels_kept": 383
+      },
+      "R": {
+        "islands_removed": 4,
+        "voxels_removed": 754,
+        "voxels_kept": 201
+      }
+    },
+    "106": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 89,
+        "voxels_kept": 490
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 320,
+        "voxels_kept": 500
+      }
+    },
+    "107": {
+      "L": {
+        "islands_removed": 3,
+        "voxels_removed": 740,
+        "voxels_kept": 91
+      },
+      "R": {
+        "islands_removed": 2,
+        "voxels_removed": 1006,
+        "voxels_kept": 202
+      }
+    },
+    "108": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 104,
+        "voxels_kept": 435
+      },
+      "R": {
+        "islands_removed": 0,
+        "voxels_removed": 0,
+        "voxels_kept": 332
+      }
+    },
+    "109": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 28,
+        "voxels_kept": 432
+      },
+      "R": {
+        "islands_removed": 7,
+        "voxels_removed": 664,
+        "voxels_kept": 245
+      }
+    },
+    "110": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 684,
+        "voxels_kept": 231
+      },
+      "R": {
+        "islands_removed": 2,
+        "voxels_removed": 791,
+        "voxels_kept": 145
+      }
+    },
+    "111": {
+      "L": {
+        "islands_removed": 2,
+        "voxels_removed": 804,
+        "voxels_kept": 406
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 360,
+        "voxels_kept": 724
+      }
+    },
+    "112": {
+      "L": {
+        "islands_removed": 2,
+        "voxels_removed": 500,
+        "voxels_kept": 509
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 287,
+        "voxels_kept": 834
+      }
+    },
+    "113": {
+      "L": {
+        "islands_removed": 4,
+        "voxels_removed": 314,
+        "voxels_kept": 381
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 154,
+        "voxels_kept": 458
+      }
+    },
+    "114": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 688,
+        "voxels_kept": 394
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 244,
+        "voxels_kept": 610
+      }
+    },
+    "115": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 1372,
+        "voxels_kept": 3
+      },
+      "R": {
+        "islands_removed": 14,
+        "voxels_removed": 1776,
+        "voxels_kept": 59
+      }
+    },
+    "116": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 201,
+        "voxels_kept": 357
+      },
+      "R": {
+        "islands_removed": 2,
+        "voxels_removed": 829,
+        "voxels_kept": 180
+      }
+    },
+    "117": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 566,
+        "voxels_kept": 599
+      },
+      "R": {
+        "islands_removed": 4,
+        "voxels_removed": 940,
+        "voxels_kept": 123
+      }
+    },
+    "118": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 107,
+        "voxels_kept": 1037
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 400,
+        "voxels_kept": 298
+      }
+    },
+    "119": {
+      "L": {
+        "islands_removed": 4,
+        "voxels_removed": 1023,
+        "voxels_kept": 23
+      },
+      "R": {
+        "islands_removed": 2,
+        "voxels_removed": 1016,
+        "voxels_kept": 108
+      }
+    },
+    "120": {
+      "L": {
+        "islands_removed": 2,
+        "voxels_removed": 274,
+        "voxels_kept": 280
+      },
+      "R": {
+        "islands_removed": 4,
+        "voxels_removed": 693,
+        "voxels_kept": 330
+      }
+    },
+    "121": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 736,
+        "voxels_kept": 124
+      },
+      "R": {
+        "islands_removed": 0,
+        "voxels_removed": 0,
+        "voxels_kept": 556
+      }
+    },
+    "122": {
+      "L": {
+        "islands_removed": 3,
+        "voxels_removed": 669,
+        "voxels_kept": 243
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 485,
+        "voxels_kept": 153
+      }
+    },
+    "123": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 454,
+        "voxels_kept": 310
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 46,
+        "voxels_kept": 490
+      }
+    },
+    "124": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 206,
+        "voxels_kept": 591
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 128,
+        "voxels_kept": 497
+      }
+    },
+    "125": {
+      "L": {
+        "islands_removed": 2,
+        "voxels_removed": 467,
+        "voxels_kept": 261
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 371,
+        "voxels_kept": 268
+      }
+    },
+    "126": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 567,
+        "voxels_kept": 160
+      },
+      "R": {
+        "islands_removed": 4,
+        "voxels_removed": 629,
+        "voxels_kept": 275
+      }
+    },
+    "127": {
+      "L": {
+        "islands_removed": 2,
+        "voxels_removed": 325,
+        "voxels_kept": 372
+      },
+      "R": {
+        "islands_removed": 5,
+        "voxels_removed": 570,
+        "voxels_kept": 146
+      }
+    },
+    "128": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 478,
+        "voxels_kept": 378
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 102,
+        "voxels_kept": 474
+      }
+    },
+    "129": {
+      "L": {
+        "islands_removed": 7,
+        "voxels_removed": 1069,
+        "voxels_kept": 45
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 64,
+        "voxels_kept": 331
+      }
+    },
+    "131": {
+      "L": {
+        "islands_removed": 0,
+        "voxels_removed": 0,
+        "voxels_kept": 574
+      },
+      "R": {
+        "islands_removed": 0,
+        "voxels_removed": 0,
+        "voxels_kept": 558
+      }
+    },
+    "132": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 8,
+        "voxels_kept": 440
+      },
+      "R": {
+        "islands_removed": 2,
+        "voxels_removed": 533,
+        "voxels_kept": 572
+      }
+    },
+    "134": {
+      "L": {
+        "islands_removed": 2,
+        "voxels_removed": 17,
+        "voxels_kept": 867
+      },
+      "R": {
+        "islands_removed": 2,
+        "voxels_removed": 999,
+        "voxels_kept": 282
+      }
+    },
+    "135": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 849,
+        "voxels_kept": 175
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 205,
+        "voxels_kept": 976
+      }
+    },
+    "136": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 837,
+        "voxels_kept": 638
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 1071,
+        "voxels_kept": 454
+      }
+    },
+    "137": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 4,
+        "voxels_kept": 315
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 631,
+        "voxels_kept": 316
+      }
+    },
+    "138": {
+      "L": {
+        "islands_removed": 7,
+        "voxels_removed": 712,
+        "voxels_kept": 63
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 101,
+        "voxels_kept": 281
+      }
+    },
+    "139": {
+      "L": {
+        "islands_removed": 2,
+        "voxels_removed": 292,
+        "voxels_kept": 552
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 74,
+        "voxels_kept": 414
+      }
+    },
+    "140": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 1218,
+        "voxels_kept": 18
+      },
+      "R": {
+        "islands_removed": 2,
+        "voxels_removed": 1024,
+        "voxels_kept": 163
+      }
+    },
+    "141": {
+      "L": {
+        "islands_removed": 3,
+        "voxels_removed": 1523,
+        "voxels_kept": 418
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 277,
+        "voxels_kept": 875
+      }
+    },
+    "142": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 832,
+        "voxels_kept": 179
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 952,
+        "voxels_kept": 155
+      }
+    },
+    "143": {
+      "L": {
+        "islands_removed": 0,
+        "voxels_removed": 0,
+        "voxels_kept": 457
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 210,
+        "voxels_kept": 469
+      }
+    },
+    "144": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 490,
+        "voxels_kept": 612
+      },
+      "R": {
+        "islands_removed": 2,
+        "voxels_removed": 604,
+        "voxels_kept": 568
+      }
+    },
+    "145": {
+      "L": {
+        "islands_removed": 2,
+        "voxels_removed": 1674,
+        "voxels_kept": 188
+      },
+      "R": {
+        "islands_removed": 2,
+        "voxels_removed": 1540,
+        "voxels_kept": 268
+      }
+    },
+    "146": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 52,
+        "voxels_kept": 1534
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 46,
+        "voxels_kept": 973
+      }
+    },
+    "147": {
+      "L": {
+        "islands_removed": 5,
+        "voxels_removed": 1746,
+        "voxels_kept": 9
+      },
+      "R": {
+        "islands_removed": 3,
+        "voxels_removed": 769,
+        "voxels_kept": 573
+      }
+    },
+    "148": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 313,
+        "voxels_kept": 239
+      },
+      "R": {
+        "islands_removed": 0,
+        "voxels_removed": 0,
+        "voxels_kept": 362
+      }
+    },
+    "149": {
+      "L": {
+        "islands_removed": 2,
+        "voxels_removed": 405,
+        "voxels_kept": 420
+      },
+      "R": {
+        "islands_removed": 2,
+        "voxels_removed": 1368,
+        "voxels_kept": 155
+      }
+    },
+    "150": {
+      "L": {
+        "islands_removed": 2,
+        "voxels_removed": 163,
+        "voxels_kept": 551
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 87,
+        "voxels_kept": 701
+      }
+    },
+    "151": {
+      "L": {
+        "islands_removed": 3,
+        "voxels_removed": 58,
+        "voxels_kept": 424
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 258,
+        "voxels_kept": 445
+      }
+    },
+    "152": {
+      "L": {
+        "islands_removed": 3,
+        "voxels_removed": 863,
+        "voxels_kept": 59
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 479,
+        "voxels_kept": 398
+      }
+    },
+    "153": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 528,
+        "voxels_kept": 576
+      },
+      "R": {
+        "islands_removed": 2,
+        "voxels_removed": 909,
+        "voxels_kept": 299
+      }
+    },
+    "154": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 48,
+        "voxels_kept": 402
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 213,
+        "voxels_kept": 413
+      }
+    },
+    "155": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 366,
+        "voxels_kept": 591
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 99,
+        "voxels_kept": 508
+      }
+    },
+    "156": {
+      "L": {
+        "islands_removed": 4,
+        "voxels_removed": 1390,
+        "voxels_kept": 181
+      },
+      "R": {
+        "islands_removed": 6,
+        "voxels_removed": 1709,
+        "voxels_kept": 0
+      }
+    },
+    "157": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 1516,
+        "voxels_kept": 134
+      },
+      "R": {
+        "islands_removed": 3,
+        "voxels_removed": 1514,
+        "voxels_kept": 0
+      }
+    },
+    "158": {
+      "L": {
+        "islands_removed": 4,
+        "voxels_removed": 762,
+        "voxels_kept": 270
+      },
+      "R": {
+        "islands_removed": 0,
+        "voxels_removed": 0,
+        "voxels_kept": 398
+      }
+    },
+    "159": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 837,
+        "voxels_kept": 195
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 636,
+        "voxels_kept": 345
+      }
+    },
+    "161": {
+      "L": {
+        "islands_removed": 2,
+        "voxels_removed": 500,
+        "voxels_kept": 871
+      },
+      "R": {
+        "islands_removed": 0,
+        "voxels_removed": 0,
+        "voxels_kept": 277
+      }
+    },
+    "162": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 189,
+        "voxels_kept": 307
+      },
+      "R": {
+        "islands_removed": 3,
+        "voxels_removed": 140,
+        "voxels_kept": 300
+      }
+    },
+    "163": {
+      "L": {
+        "islands_removed": 0,
+        "voxels_removed": 0,
+        "voxels_kept": 553
+      },
+      "R": {
+        "islands_removed": 0,
+        "voxels_removed": 0,
+        "voxels_kept": 605
+      }
+    },
+    "164": {
+      "L": {
+        "islands_removed": 5,
+        "voxels_removed": 1015,
+        "voxels_kept": 0
+      },
+      "R": {
+        "islands_removed": 4,
+        "voxels_removed": 1021,
+        "voxels_kept": 156
+      }
+    },
+    "165": {
+      "L": {
+        "islands_removed": 2,
+        "voxels_removed": 895,
+        "voxels_kept": 251
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 262,
+        "voxels_kept": 342
+      }
+    },
+    "166": {
+      "L": {
+        "islands_removed": 3,
+        "voxels_removed": 1079,
+        "voxels_kept": 303
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 686,
+        "voxels_kept": 242
+      }
+    },
+    "167": {
+      "L": {
+        "islands_removed": 2,
+        "voxels_removed": 541,
+        "voxels_kept": 340
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 525,
+        "voxels_kept": 320
+      }
+    },
+    "169": {
+      "L": {
+        "islands_removed": 2,
+        "voxels_removed": 156,
+        "voxels_kept": 488
+      },
+      "R": {
+        "islands_removed": 0,
+        "voxels_removed": 0,
+        "voxels_kept": 431
+      }
+    },
+    "170": {
+      "L": {
+        "islands_removed": 3,
+        "voxels_removed": 639,
+        "voxels_kept": 382
+      },
+      "R": {
+        "islands_removed": 2,
+        "voxels_removed": 636,
+        "voxels_kept": 330
+      }
+    },
+    "171": {
+      "L": {
+        "islands_removed": 4,
+        "voxels_removed": 1500,
+        "voxels_kept": 13
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 224,
+        "voxels_kept": 737
+      }
+    },
+    "172": {
+      "L": {
+        "islands_removed": 2,
+        "voxels_removed": 999,
+        "voxels_kept": 313
+      },
+      "R": {
+        "islands_removed": 2,
+        "voxels_removed": 120,
+        "voxels_kept": 646
+      }
+    },
+    "173": {
+      "L": {
+        "islands_removed": 3,
+        "voxels_removed": 1532,
+        "voxels_kept": 22
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 1354,
+        "voxels_kept": 117
+      }
+    },
+    "174": {
+      "L": {
+        "islands_removed": 3,
+        "voxels_removed": 28,
+        "voxels_kept": 431
+      },
+      "R": {
+        "islands_removed": 2,
+        "voxels_removed": 120,
+        "voxels_kept": 435
+      }
+    },
+    "175": {
+      "L": {
+        "islands_removed": 2,
+        "voxels_removed": 93,
+        "voxels_kept": 515
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 700,
+        "voxels_kept": 355
+      }
+    },
+    "176": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 668,
+        "voxels_kept": 303
+      },
+      "R": {
+        "islands_removed": 2,
+        "voxels_removed": 477,
+        "voxels_kept": 314
+      }
+    },
+    "177": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 426,
+        "voxels_kept": 406
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 431,
+        "voxels_kept": 393
+      }
+    },
+    "178": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 986,
+        "voxels_kept": 401
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 1140,
+        "voxels_kept": 175
+      }
+    },
+    "179": {
+      "L": {
+        "islands_removed": 2,
+        "voxels_removed": 603,
+        "voxels_kept": 310
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 364,
+        "voxels_kept": 438
+      }
+    },
+    "180": {
+      "L": {
+        "islands_removed": 2,
+        "voxels_removed": 680,
+        "voxels_kept": 360
+      },
+      "R": {
+        "islands_removed": 2,
+        "voxels_removed": 854,
+        "voxels_kept": 540
+      }
+    },
+    "181": {
+      "L": {
+        "islands_removed": 2,
+        "voxels_removed": 362,
+        "voxels_kept": 358
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 72,
+        "voxels_kept": 540
+      }
+    },
+    "182": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 289,
+        "voxels_kept": 718
+      },
+      "R": {
+        "islands_removed": 2,
+        "voxels_removed": 931,
+        "voxels_kept": 739
+      }
+    },
+    "183": {
+      "L": {
+        "islands_removed": 3,
+        "voxels_removed": 870,
+        "voxels_kept": 277
+      },
+      "R": {
+        "islands_removed": 0,
+        "voxels_removed": 0,
+        "voxels_kept": 622
+      }
+    },
+    "184": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 367,
+        "voxels_kept": 422
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 133,
+        "voxels_kept": 419
+      }
+    },
+    "185": {
+      "L": {
+        "islands_removed": 0,
+        "voxels_removed": 0,
+        "voxels_kept": 533
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 46,
+        "voxels_kept": 420
+      }
+    },
+    "186": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 421,
+        "voxels_kept": 527
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 955,
+        "voxels_kept": 389
+      }
+    },
+    "187": {
+      "L": {
+        "islands_removed": 2,
+        "voxels_removed": 1156,
+        "voxels_kept": 215
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 1184,
+        "voxels_kept": 294
+      }
+    },
+    "188": {
+      "L": {
+        "islands_removed": 2,
+        "voxels_removed": 609,
+        "voxels_kept": 341
+      },
+      "R": {
+        "islands_removed": 2,
+        "voxels_removed": 807,
+        "voxels_kept": 341
+      }
+    },
+    "189": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 668,
+        "voxels_kept": 348
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 161,
+        "voxels_kept": 433
+      }
+    },
+    "190": {
+      "L": {
+        "islands_removed": 2,
+        "voxels_removed": 706,
+        "voxels_kept": 430
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 722,
+        "voxels_kept": 452
+      }
+    },
+    "191": {
+      "L": {
+        "islands_removed": 2,
+        "voxels_removed": 940,
+        "voxels_kept": 0
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 27,
+        "voxels_kept": 506
+      }
+    },
+    "192": {
+      "L": {
+        "islands_removed": 2,
+        "voxels_removed": 174,
+        "voxels_kept": 361
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 527,
+        "voxels_kept": 267
+      }
+    },
+    "193": {
+      "L": {
+        "islands_removed": 2,
+        "voxels_removed": 20,
+        "voxels_kept": 439
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 433,
+        "voxels_kept": 497
+      }
+    },
+    "194": {
+      "L": {
+        "islands_removed": 9,
+        "voxels_removed": 1375,
+        "voxels_kept": 246
+      },
+      "R": {
+        "islands_removed": 2,
+        "voxels_removed": 1169,
+        "voxels_kept": 100
+      }
+    },
+    "195": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 638,
+        "voxels_kept": 241
+      },
+      "R": {
+        "islands_removed": 2,
+        "voxels_removed": 1075,
+        "voxels_kept": 60
+      }
+    },
+    "196": {
+      "L": {
+        "islands_removed": 3,
+        "voxels_removed": 1316,
+        "voxels_kept": 65
+      },
+      "R": {
+        "islands_removed": 2,
+        "voxels_removed": 416,
+        "voxels_kept": 292
+      }
+    },
+    "197": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 1871,
+        "voxels_kept": 23
+      },
+      "R": {
+        "islands_removed": 3,
+        "voxels_removed": 855,
+        "voxels_kept": 49
+      }
+    },
+    "198": {
+      "L": {
+        "islands_removed": 3,
+        "voxels_removed": 245,
+        "voxels_kept": 956
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 22,
+        "voxels_kept": 714
+      }
+    },
+    "199": {
+      "L": {
+        "islands_removed": 3,
+        "voxels_removed": 1342,
+        "voxels_kept": 4
+      },
+      "R": {
+        "islands_removed": 5,
+        "voxels_removed": 978,
+        "voxels_kept": 246
+      }
+    },
+    "200": {
+      "L": {
+        "islands_removed": 3,
+        "voxels_removed": 1367,
+        "voxels_kept": 349
+      },
+      "R": {
+        "islands_removed": 2,
+        "voxels_removed": 839,
+        "voxels_kept": 520
+      }
+    },
+    "201": {
+      "L": {
+        "islands_removed": 3,
+        "voxels_removed": 736,
+        "voxels_kept": 211
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 148,
+        "voxels_kept": 318
+      }
+    },
+    "202": {
+      "L": {
+        "islands_removed": 7,
+        "voxels_removed": 1505,
+        "voxels_kept": 44
+      },
+      "R": {
+        "islands_removed": 2,
+        "voxels_removed": 1129,
+        "voxels_kept": 205
+      }
+    },
+    "203": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 507,
+        "voxels_kept": 449
+      },
+      "R": {
+        "islands_removed": 5,
+        "voxels_removed": 990,
+        "voxels_kept": 495
+      }
+    },
+    "204": {
+      "L": {
+        "islands_removed": 3,
+        "voxels_removed": 363,
+        "voxels_kept": 537
+      },
+      "R": {
+        "islands_removed": 3,
+        "voxels_removed": 912,
+        "voxels_kept": 462
+      }
+    },
+    "205": {
+      "L": {
+        "islands_removed": 2,
+        "voxels_removed": 270,
+        "voxels_kept": 380
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 1098,
+        "voxels_kept": 338
+      }
+    },
+    "206": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 612,
+        "voxels_kept": 373
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 1474,
+        "voxels_kept": 29
+      }
+    },
+    "207": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 619,
+        "voxels_kept": 420
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 1378,
+        "voxels_kept": 192
+      }
+    },
+    "209": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 223,
+        "voxels_kept": 524
+      },
+      "R": {
+        "islands_removed": 5,
+        "voxels_removed": 356,
+        "voxels_kept": 198
+      }
+    },
+    "210": {
+      "L": {
+        "islands_removed": 0,
+        "voxels_removed": 0,
+        "voxels_kept": 454
+      },
+      "R": {
+        "islands_removed": 3,
+        "voxels_removed": 1523,
+        "voxels_kept": 103
+      }
+    },
+    "211": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 433,
+        "voxels_kept": 311
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 84,
+        "voxels_kept": 377
+      }
+    },
+    "212": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 701,
+        "voxels_kept": 301
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 812,
+        "voxels_kept": 272
+      }
+    },
+    "213": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 484,
+        "voxels_kept": 344
+      },
+      "R": {
+        "islands_removed": 3,
+        "voxels_removed": 339,
+        "voxels_kept": 359
+      }
+    },
+    "214": {
+      "L": {
+        "islands_removed": 8,
+        "voxels_removed": 337,
+        "voxels_kept": 376
+      },
+      "R": {
+        "islands_removed": 0,
+        "voxels_removed": 0,
+        "voxels_kept": 524
+      }
+    },
+    "215": {
+      "L": {
+        "islands_removed": 2,
+        "voxels_removed": 1158,
+        "voxels_kept": 416
+      },
+      "R": {
+        "islands_removed": 2,
+        "voxels_removed": 1059,
+        "voxels_kept": 237
+      }
+    },
+    "216": {
+      "L": {
+        "islands_removed": 2,
+        "voxels_removed": 758,
+        "voxels_kept": 442
+      },
+      "R": {
+        "islands_removed": 2,
+        "voxels_removed": 811,
+        "voxels_kept": 450
+      }
+    },
+    "217": {
+      "L": {
+        "islands_removed": 8,
+        "voxels_removed": 475,
+        "voxels_kept": 277
+      },
+      "R": {
+        "islands_removed": 8,
+        "voxels_removed": 590,
+        "voxels_kept": 195
+      }
+    },
+    "218": {
+      "L": {
+        "islands_removed": 2,
+        "voxels_removed": 444,
+        "voxels_kept": 456
+      },
+      "R": {
+        "islands_removed": 3,
+        "voxels_removed": 432,
+        "voxels_kept": 453
+      }
+    },
+    "220": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 623,
+        "voxels_kept": 209
+      },
+      "R": {
+        "islands_removed": 2,
+        "voxels_removed": 1213,
+        "voxels_kept": 0
+      }
+    },
+    "221": {
+      "L": {
+        "islands_removed": 2,
+        "voxels_removed": 864,
+        "voxels_kept": 190
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 48,
+        "voxels_kept": 461
+      }
+    },
+    "222": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 213,
+        "voxels_kept": 677
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 254,
+        "voxels_kept": 928
+      }
+    },
+    "223": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 74,
+        "voxels_kept": 715
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 1077,
+        "voxels_kept": 14
+      }
+    },
+    "224": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 389,
+        "voxels_kept": 525
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 442,
+        "voxels_kept": 395
+      }
+    },
+    "225": {
+      "L": {
+        "islands_removed": 10,
+        "voxels_removed": 345,
+        "voxels_kept": 893
+      },
+      "R": {
+        "islands_removed": 4,
+        "voxels_removed": 665,
+        "voxels_kept": 91
+      }
+    },
+    "226": {
+      "L": {
+        "islands_removed": 2,
+        "voxels_removed": 1143,
+        "voxels_kept": 207
+      },
+      "R": {
+        "islands_removed": 3,
+        "voxels_removed": 1520,
+        "voxels_kept": 11
+      }
+    },
+    "228": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 1333,
+        "voxels_kept": 29
+      },
+      "R": {
+        "islands_removed": 3,
+        "voxels_removed": 1745,
+        "voxels_kept": 2
+      }
+    },
+    "229": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 782,
+        "voxels_kept": 168
+      },
+      "R": {
+        "islands_removed": 2,
+        "voxels_removed": 456,
+        "voxels_kept": 418
+      }
+    },
+    "230": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 929,
+        "voxels_kept": 666
+      },
+      "R": {
+        "islands_removed": 0,
+        "voxels_removed": 0,
+        "voxels_kept": 880
+      }
+    },
+    "231": {
+      "L": {
+        "islands_removed": 0,
+        "voxels_removed": 0,
+        "voxels_kept": 366
+      },
+      "R": {
+        "islands_removed": 0,
+        "voxels_removed": 0,
+        "voxels_kept": 621
+      }
+    },
+    "232": {
+      "L": {
+        "islands_removed": 3,
+        "voxels_removed": 659,
+        "voxels_kept": 416
+      },
+      "R": {
+        "islands_removed": 2,
+        "voxels_removed": 693,
+        "voxels_kept": 297
+      }
+    },
+    "233": {
+      "L": {
+        "islands_removed": 5,
+        "voxels_removed": 1054,
+        "voxels_kept": 198
+      },
+      "R": {
+        "islands_removed": 2,
+        "voxels_removed": 1448,
+        "voxels_kept": 149
+      }
+    },
+    "234": {
+      "L": {
+        "islands_removed": 2,
+        "voxels_removed": 586,
+        "voxels_kept": 311
+      },
+      "R": {
+        "islands_removed": 3,
+        "voxels_removed": 1673,
+        "voxels_kept": 47
+      }
+    },
+    "235": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 697,
+        "voxels_kept": 283
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 169,
+        "voxels_kept": 609
+      }
+    },
+    "236": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 8,
+        "voxels_kept": 631
+      },
+      "R": {
+        "islands_removed": 2,
+        "voxels_removed": 980,
+        "voxels_kept": 372
+      }
+    },
+    "237": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 651,
+        "voxels_kept": 356
+      },
+      "R": {
+        "islands_removed": 3,
+        "voxels_removed": 578,
+        "voxels_kept": 457
+      }
+    },
+    "238": {
+      "L": {
+        "islands_removed": 0,
+        "voxels_removed": 0,
+        "voxels_kept": 553
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 48,
+        "voxels_kept": 635
+      }
+    },
+    "239": {
+      "L": {
+        "islands_removed": 0,
+        "voxels_removed": 0,
+        "voxels_kept": 558
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 4,
+        "voxels_kept": 457
+      }
+    },
+    "240": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 761,
+        "voxels_kept": 574
+      },
+      "R": {
+        "islands_removed": 3,
+        "voxels_removed": 496,
+        "voxels_kept": 497
+      }
+    },
+    "241": {
+      "L": {
+        "islands_removed": 3,
+        "voxels_removed": 961,
+        "voxels_kept": 278
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 10,
+        "voxels_kept": 566
+      }
+    },
+    "242": {
+      "L": {
+        "islands_removed": 3,
+        "voxels_removed": 794,
+        "voxels_kept": 125
+      },
+      "R": {
+        "islands_removed": 6,
+        "voxels_removed": 647,
+        "voxels_kept": 368
+      }
+    },
+    "243": {
+      "L": {
+        "islands_removed": 2,
+        "voxels_removed": 64,
+        "voxels_kept": 594
+      },
+      "R": {
+        "islands_removed": 4,
+        "voxels_removed": 957,
+        "voxels_kept": 284
+      }
+    },
+    "244": {
+      "L": {
+        "islands_removed": 2,
+        "voxels_removed": 977,
+        "voxels_kept": 298
+      },
+      "R": {
+        "islands_removed": 0,
+        "voxels_removed": 0,
+        "voxels_kept": 647
+      }
+    },
+    "245": {
+      "L": {
+        "islands_removed": 0,
+        "voxels_removed": 0,
+        "voxels_kept": 505
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 742,
+        "voxels_kept": 223
+      }
+    },
+    "246": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 1033,
+        "voxels_kept": 212
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 1091,
+        "voxels_kept": 146
+      }
+    },
+    "247": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 29,
+        "voxels_kept": 794
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 31,
+        "voxels_kept": 592
+      }
+    },
+    "248": {
+      "L": {
+        "islands_removed": 2,
+        "voxels_removed": 1160,
+        "voxels_kept": 151
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 439,
+        "voxels_kept": 29
+      }
+    },
+    "249": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 711,
+        "voxels_kept": 548
+      },
+      "R": {
+        "islands_removed": 2,
+        "voxels_removed": 295,
+        "voxels_kept": 541
+      }
+    },
+    "250": {
+      "L": {
+        "islands_removed": 1,
+        "voxels_removed": 276,
+        "voxels_kept": 491
+      },
+      "R": {
+        "islands_removed": 1,
+        "voxels_removed": 739,
+        "voxels_kept": 287
+      }
+    }
+  }
+}
